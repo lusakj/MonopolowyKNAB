@@ -21,7 +21,7 @@ class CounterApplication(Frame):
         return '    ' + product.name + "    " + product.price
 
     def presentShop(self, shop):
-        return shop.name
+        return shop.name + "\n" + str(shop.coordinates.calculate_distance(0, 0))
 
     def create_widgets(self):
         self.master.geometry("500x500")
