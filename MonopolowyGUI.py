@@ -26,19 +26,22 @@ class CounterApplication(Frame):
     def create_widgets(self):
         self.master.geometry("500x500")
 
-        Lb1 = Listbox(self.master, width=100, height=100)
+        self.Lb1 = Listbox(self.master, width=100, height=50)
         shops = self.model.search("")
         idx = 1
         for shop in shops:
-            Lb1.insert(idx, self.presentShop(shop))
+            self.Lb1.insert(idx, self.presentShop(shop))
             idx += 1
             for product in shop.products:
-                Lb1.insert(idx, self.presentProduct(product))
+                self.Lb1.insert(idx, self.presentProduct(product))
                 idx += 1
 
-        Lb1.pack()
+        self.Lb1.pack()
+        self.search = Button(self)
+        self.create_button("Wyszukaj", self.clear, self.search)
 
-        self.create_button("Wyszukaj", command )
+    def clear(self):
+        self.Lb1.delete(0, END)
 
     def create_button(self, label, action, button):
         button["text"] = label
