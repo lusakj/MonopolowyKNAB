@@ -1,0 +1,15 @@
+[
+  {
+    "name": "U Wieśka",
+    "coordinates": {
+      "x": 21.15,
+      "y": 10.23
+    },
+    "products": [
+      {
+        "name": "Wyborowa 0.5l",
+        "price": "40.00"
+      }
+    ]
+  }
+]
