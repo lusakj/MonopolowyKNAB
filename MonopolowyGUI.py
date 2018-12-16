@@ -39,9 +39,20 @@ class CounterApplication(Frame):
         self.Lb1.pack()
         self.search = Button(self)
         self.create_button("Wyszukaj", self.clear, self.search)
+        self.tbox = Entry(self)
+        self.tbox.pack()
 
     def clear(self):
         self.Lb1.delete(0, END)
+        shops = self.model.search(self.tbox.get())
+        idx = 1
+        for shop in shops:
+            self.Lb1.insert(idx, self.presentShop(shop))
+            idx += 1
+            for product in shop.products:
+                self.Lb1.insert(idx, self.presentProduct(product))
+                idx += 1
+
 
     def create_button(self, label, action, button):
         button["text"] = label
