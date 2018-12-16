@@ -13,9 +13,10 @@ class Coordinates:
         self.x = x
         self.y = y
 
-    def calculate_distance(self, other):
-        distance = math.sqrt((other.x-self.x)**2 + (other.y-self.y)**2)
+    def calculate_distance(self, x, y):
+        distance = math.sqrt((x-self.x)**2 + (y-self.y)**2)
         return distance
+
 
 
 class Shop:
@@ -36,7 +37,7 @@ class Shop:
 class Model:
     def __init__(self):
         with open('data.json', 'r') as outfile:
-            self.shops = self.__to_objects (json.load(outfile))
+            self.shops = self.__to_objects(json.load(outfile))
 
     def __to_objects(self, shops_jsons):
         objects = []
@@ -55,7 +56,6 @@ class Model:
             products.append(Product(product["name"], product["price"]))
         return products
 
-
     def search(self, starting_string):
         found_shops = []
         for shop in self.shops:
@@ -64,6 +64,20 @@ class Model:
                 found_shops.append(Shop(shop.name, shop.coordinates, in_shop))
 
         return found_shops
+
+    def sort_shops_name(self, found_shops):
+        sorted_by_name = sorted(found_shops, key= lambda shop: shop.name, reverse=True)
+        return sorted_by_name
+
+    def sort_shops_price(self, found_shops):
+        sorted_by_price = sorted(found_shops, key= lambda shop: shop.name)
+        return sorted_by_price
+
+    def sort_shops_distance(self, found_shops):
+        sorted_by_distance = sorted(found_shops, key= lambda shop: shop.coordinates.calculate_distance(0,0))
+        return sorted_by_distance
+
+
 
 
 

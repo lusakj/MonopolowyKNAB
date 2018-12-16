@@ -9,7 +9,86 @@
       {
         "name": "Wyborowa 0.5l",
         "price": "40.00"
+      },
+      {
+        "name": "Wyborowa 0.l",
+        "price": "50.00"
+      },
+      {
+        "name": "Carlo Rossi 0.5l",
+        "price": "25.50"
+      },
+      {
+        "name": "Jack Daniels 0.5l",
+        "price": "50.00"
+      },
+      {
+        "name": "Jack Daniels 0.7l",
+        "price": "70.00"
+      },
+      {
+        "name": "Krupnik 0.5l",
+        "price": "25.00"
+      },
+      {
+        "name": "Krupnik 1l",
+        "price": "50.00"
       }
     ]
+  },
+  {
+    "name": "Basia",
+    "coordinates": {
+      "x": 10.50,
+      "y": -5
+    },
+    "products": [
+      {
+        "name": "Wyborowa 0.5l",
+        "price": "38.00"
+      },
+      {
+        "name": "Wyborowa 0.7l",
+        "price": "55.00"
+      },
+      {
+        "name": "Jack Daniels 0.5l",
+        "price": "55.00"
+      },
+      {
+        "name": "Jack Daniels 1l",
+        "price": "80.00"
+      },
+      {
+        "name": "Krupnik 0.5l",
+        "price": "26.00"
+      }
+    ]
+  },
+  {
+    "name": "Bachus",
+    "coordinates": {
+      "x" : 4.5,
+      "y" :-7
+    },
+    "products": [
+      {
+        "name": "Wyborowa 0.5l",
+        "price": "39.00"
+      },
+      {
+        "name": "Wyborowa 1l",
+        "price": "65.00"
+      },
+      {
+        "name": "Jack Daniels 0.7l",
+        "price": "70.00"
+      },
+      {
+        "name": "Jack Daniels 0.5l",
+        "price": "40.00"
+      }
+    ]
+
   }
 ]
