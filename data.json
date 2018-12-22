@@ -90,5 +90,32 @@
       }
     ]
 
+  },
+  {
+    "name": "U Joli",
+    "coordinates":
+    {
+      "x" : 3.4,
+      "y" : -2.5
+    },
+    "products":
+    [
+      {
+        "name" : "Carlo Rossi 0.7l",
+        "price" : "30.00"
+      },
+      {
+        "name" : "Jack Daniels 0.7l",
+        "price" : "77.00"
+      },
+      {
+        "name" : "Jack Daniels 1l",
+        "price" : "89.00"
+      },
+      {
+        "name" : "Wyborowa 0.5l",
+        "price" : "25.00"
+      }
+    ]
   }
 ]

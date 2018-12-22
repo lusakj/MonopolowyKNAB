@@ -2,7 +2,8 @@ from tkinter import *
 
 from Domain import Model
 
-class CounterApplication(Frame):
+
+class MonopolowyApplication(Frame):
     def __init__(self, master=None):
         super().__init__(master)
         self.master = master
@@ -21,7 +22,7 @@ class CounterApplication(Frame):
         return '    ' + product.name + "    " + product.price
 
     def presentShop(self, shop):
-        return shop.name + "\n" + str(shop.coordinates.calculate_distance(0, 0))
+        return shop.name + "  " + str(shop.coordinates.calculate_distance(0, 0))
 
     def create_widgets(self):
         self.master.geometry("500x500")
@@ -53,14 +54,14 @@ class CounterApplication(Frame):
                 self.Lb1.insert(idx, self.presentProduct(product))
                 idx += 1
 
-
     def create_button(self, label, action, button):
         button["text"] = label
         button["command"] = action
         button.pack(side="top")
 
 root = Tk()
-app = CounterApplication(master=root)
+root.title("Find alko")
+app = MonopolowyApplication(master=root)
 app.mainloop()
 
 

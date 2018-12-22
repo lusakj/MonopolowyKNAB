@@ -15,7 +15,7 @@ class Coordinates:
 
     def calculate_distance(self, x, y):
         distance = math.sqrt((x-self.x)**2 + (y-self.y)**2)
-        return distance
+        return round(distance, 2)
 
 
 
@@ -62,19 +62,20 @@ class Model:
             in_shop = shop.find_products(starting_string)
             if len(in_shop) != 0:
                 found_shops.append(Shop(shop.name, shop.coordinates, in_shop))
+        sorted_by_distance = self.sort_shops_distance(found_shops)
 
-        return found_shops
+        return sorted_by_distance
 
     def sort_shops_name(self, found_shops):
-        sorted_by_name = sorted(found_shops, key= lambda shop: shop.name, reverse=True)
+        sorted_by_name = sorted(found_shops, key=lambda shop: shop.name, reverse=True)
         return sorted_by_name
 
     def sort_shops_price(self, found_shops):
-        sorted_by_price = sorted(found_shops, key= lambda shop: shop.name)
+        sorted_by_price = sorted(found_shops, key=lambda shop: shop.name)
         return sorted_by_price
 
     def sort_shops_distance(self, found_shops):
-        sorted_by_distance = sorted(found_shops, key= lambda shop: shop.coordinates.calculate_distance(0,0))
+        sorted_by_distance = sorted(found_shops, key=lambda shop: shop.coordinates.calculate_distance(0,0))
         return sorted_by_distance
 
 
